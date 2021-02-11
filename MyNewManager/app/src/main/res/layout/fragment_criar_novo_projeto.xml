@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fundo"
+    tools:context=".criarNovoProjeto">
+
+
+    <TextView
+        android:id="@+id/txtNomeProjeto_novoProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NomeProjeto"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginTop="@dimen/topMargin"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nomeProjetoInput_novoProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeProjeto_novoProjeto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeProjetoField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginStart="@dimen/startMargin"
+            android:layout_marginEnd="@dimen/endMargin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txtDataProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/DataPrevista"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@id/nomeProjetoInput_novoProjeto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dataProjetoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_marginStart="@dimen/startMargin"
+            android:layout_marginEnd="@dimen/endMargin"
+            app:layout_constraintTop_toBottomOf="@id/txtDataProjeto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dataProjetoField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/diamesano"
+                android:inputType="date"
+                android:layout_marginStart="@dimen/startMargin"
+                android:layout_marginEnd="@dimen/endMargin"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/descricaoProjeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Descricao"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@id/dataProjetoInput"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtDescricaoProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        app:layout_constraintBottom_toTopOf="@+id/numTarefasLayout"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoProjeto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtDescricaoProjetotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/startMargin" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+       <LinearLayout
+           android:id="@+id/numTarefasLayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="24dp"
+           app:layout_constraintTop_toBottomOf="@+id/txtDescricaoProjeto">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/numTarefasAdicionadas"
+               android:layout_marginStart="@dimen/startMargin"
+               android:layout_marginTop="@dimen/topMargin"/>
+           <TextView
+               android:id="@+id/num_Tarefas"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0"
+               android:layout_marginStart="@dimen/startMargin"
+               android:layout_marginTop="@dimen/topMargin"/>
+       </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_addTarefa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/AdicionarTarefa"
+        android:background="@color/secondaryLightColor"
+        android:padding="3dp"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/startMargin"
+        app:layout_constraintTop_toBottomOf="@id/numTarefasLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/btn_addTarefa"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_confirmar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topMargin"
+            android:background="@color/secondaryColor"
+            android:gravity="center"
+            android:text="@string/CriarProjeto"
+            android:textColor="@color/secondaryTextColor" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

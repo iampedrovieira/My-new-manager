@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">MyNewManager</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="LoginIn">Login in</string>
+    <string name="LoginFail">Login Failed</string>
+
+    <string name="MyNewManager">My New Manager</string>
+    <string name="NovoProjeto">Novo Projeto</string>
+    <string name="Tarefas">Tarefas</string>
+    <string name="Projetos">Projetos</string>
+    <string name="Projeto">Projeto</string>
+    <string name="Alertas">Alertas</string>
+    <string name="Chat">Chat</string>
+    <string name="Logout">Logout</string>
+    <string name="Login">Login</string>
+    <string name="Email">Email</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="NomeColaborador">Nome Colaborador</string>
+    <string name="CriarProjeto">Criar Projeto</string>
+    <string name="CriarTarefa">Criar Tarefa</string>
+    <string name="HoraMensagem">Hora</string>
+    <string name="Mensagem">Mensagem</string>
+    <string name="Membros">2 Membros</string>
+    <string name="Descricao">Descrição</string>
+
+    <string name="FragmentTarefas">Fragment Tarefas</string>
+    <string name="FragmentProjeto">Fragment Projeto</string>
+
+    <string name="shr_hint_username">Username</string>
+    <string name="shr_hint_password">Password</string>
+
+    <string name="NomeProjeto">Nome do Projeto</string>
+    <string name="DataPrevista">Data Prevista de Entrega</string>
+    <string name="DataEntrega">Data de Entrega</string>
+    <string name="AdicionarTarefa">Adicionar Tarefa</string>
+    <string name="diamesano">Dia/Mês/Ano</string>
+    <string name="numTarefasAdicionadas">Nº de Tarefas Adicionadas: </string>
+
+    <string name="NomeTarefa">Nome da Tarefa</string>
+    <string name="Tarefa">Tarefa</string>
+    <string name="AdicionarColab">Adicionar Colaborador</string>
+    <string name="numColabAdd">Nº de Colaboradores Adicionados: </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

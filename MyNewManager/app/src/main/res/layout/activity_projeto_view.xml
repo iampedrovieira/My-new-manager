@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProjetoView"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor">
+
+        <ImageButton
+            android:id="@+id/btn_backMenu"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_home_black_24dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nomeProjetoToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="eeeeeeeeeeeeeeeeeeeeeeeeee"
+            android:textAppearance="@style/boldMedio"
+            android:textColor="@color/secondaryTextColor" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_barProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondaryColor"
+        app:itemIconTint="@color/primaryColor"
+        app:itemTextColor="@color/secondaryTextColor"
+        app:menu="@menu/navigation_projeto" />
+
+    <LinearLayout
+        android:id="@+id/contentProjetoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/fundo"/>
+
+
+</LinearLayout>

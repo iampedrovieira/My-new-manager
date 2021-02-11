@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fundo"
+    tools:context=".novaTarefa">
+
+    <TextView
+        android:id="@+id/txtNomeTarefa_novaTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NomeTarefa"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nomeTarefainput_novaTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeTarefa_novaTarefa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeTarefaField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginStart="@dimen/startMargin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txtDataTarefa_novaTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/DataPrevista"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@+id/nomeTarefainput_novaTarefa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dataTarefaInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/diamesano"
+        android:layout_marginStart="@dimen/startMargin"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataTarefa_novaTarefa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_marginStart="@dimen/startMargin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/descricaoTarefa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Descricao"
+        android:textAppearance="@style/normalMedio"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@+id/dataTarefaInput"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtDescricaoTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoTarefa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtDescricaoTarefa3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/startMargin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+       android:id="@+id/colaboradorLayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+       app:layout_constraintTop_toBottomOf="@+id/txtDescricaoTarefa"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent">
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/NomeColaborador"/>
+   </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewColabs"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@+id/colaboradorLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/numColaboradores_novaTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topMargin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataTarefaInput"/>
+
+
+    <LinearLayout
+        android:id="@+id/botoes_novaTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="@dimen/startMargin"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewColabs"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_criarTarefa"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryLightColor"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/CriarTarefa" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

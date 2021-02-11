@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryColor">
+
+    <ImageButton
+        android:id="@+id/btn_backMenu"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="?attr/actionBarSize"
+        android:layout_gravity="start|center_vertical"
+        android:visibility="visible"
+        android:src="@drawable/ic_arrow_back_"
+        style="@style/Widget.AppCompat.ActionButton" />
+
+    <TextView
+        android:id="@+id/nomeProjetoToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/Projeto"
+        android:textColor="@color/secondaryTextColor"
+        android:textAppearance="@style/boldMedio"
+        android:layout_marginStart="65dp"/>
+
+</androidx.appcompat.widget.Toolbar>

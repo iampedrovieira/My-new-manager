@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id='@+id/navigation_tarefaProjeto'
+        android:icon='@drawable/ic_tarefa_menu'
+        android:title='@string/Tarefas' />
+    <item
+        android:id='@+id/navigation_ChatProjeto'
+        android:icon='@drawable/ic_chat'
+        android:title='@string/Chat'/>
+    <item
+        android:id='@+id/navigation_alertasProjeto'
+        android:icon='@drawable/ic_alerta_menu'
+        android:title='@string/Alertas'/>
+</menu>
